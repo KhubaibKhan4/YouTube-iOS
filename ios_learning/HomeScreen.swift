@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct HomeScreenView: View{
+    let youtubeList = ["Macos","Android", "iPhone","Web", "React"]
     var body: some View{
         NavigationView {
-            VStack{
+            ScrollView{
+
                 Image("ground")
                     .resizable()
                     .frame(height: 200)
@@ -23,6 +25,8 @@ struct HomeScreenView: View{
                     .font(Font.title)
                     .bold()
                     .shadow(color:.gray,radius: 4)
+                
+                
             }
         }
     }

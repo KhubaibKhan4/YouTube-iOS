@@ -8,34 +8,42 @@
 import SwiftUI
 
 struct YoutubeVideoItem: View {
+    
     var body: some View {
+        var title: String = "YouTube Video Title And This will be Used to display the Title."
+        var thumbnail: String? = "ground"
+        var channelImage: String? = "ground"
+        var channelName: String? = "Mr Beast"
+        var viewCount: String? = "3.6k"
+        var pubTime: String? = "7 hours ago"
+        
         VStack{
-            Image("ground")
+            Image(thumbnail ?? "ground")
                 .resizable()
                 .frame(height: 200)
                 .cornerRadius(CGFloat(24))
                 .padding(6)
             HStack{
-                Image("ground")
+                Image(channelImage ?? "ground")
                     .frame(width: 45,height: 45, alignment: Alignment.leading)
                     .clipShape(Circle())
                     .offset(x:10)
                 VStack{
-                    Text("YouTube Video Title And This will be Used to display the Title.")
+                    Text(title)
                         .bold()
                         .fontWeight(Font.Weight.heavy)
                         .font(.custom("roboto", size: 14))
                         .lineLimit(2)
                         .padding(12)
                     HStack{
-                        Text("Mr Beast •")
+                        Text("\(channelName ?? "Mr Beast") •")
                             .font(Font.caption)
                             .bold()
                         
-                        Text("3.6k views •")
+                        Text("\(viewCount ?? "3.6k") views •")
                             .font(Font.caption)
                         
-                        Text("7 hours ago")
+                        Text(pubTime ?? "UnKnown")
                             .font(Font.caption)
                         
                     }.offset(x: -34, y: -14)
