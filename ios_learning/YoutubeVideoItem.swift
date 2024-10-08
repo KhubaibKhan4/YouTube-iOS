@@ -9,7 +9,7 @@ import SwiftUI
 
 struct YoutubeVideoItem: View {
     
-    var body: some View {
+    var body: some View {   
         var title: String = "YouTube Video Title And This will be Used to display the Title."
         var thumbnail: String? = "ground"
         var channelImage: String? = "ground"
